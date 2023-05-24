@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr{
+            display: flex;
+        }
+        .label{
+            width: 150px;
+            background-color: aqua;
+            height: 100%;
+            justify-content: center;
+            margin: auto;
+            align-items: center;
+            display: flex;
+        }
+        .row{
+            /* width: 400px; */
+            display: flex ;
+           height: 40px;
+           justify-content: center;
+        }
+        .options{
+            display: flex;
+            /* margin: 0 0 0 10px; */
+            padding: 0 0 0 30px;
+        }
+        .choice{
+            padding: 0 10px;
+        }
+        #skill-name{
+            text-align: start;
+            /* width: 120px; */
+        }   
+        
+        #skill-level{
+            margin-left: 400px;
+            width: 20%;
+            height: 70%;
+        }
+        .row-1{
+            display: flex ;
+           height: 150px;
+           justify-content: center;
+        }
+        .row-2{
+            display: flex ;
+           height: 40px;
+           justify-content: center;
+        }
+        .options_skill{
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            margin: 20px 0 0 20px;
+        }
+        .choice_skill{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        #skill-level{
+            margin-left: 400px;
+            width: 20%;
+            height: 70%;
+        }
+        #jobs{
+            text-align: start;
+            width: 120px;
+        }
+        .checks{
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            margin: 20px 0 0 20px;
+        }
+        .hobby{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <table>
+            <thead>
+                <tr>
+                    Register form
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="row">
+                            <div class="label">Username</div>
+                            <input type="text" name="username" placeholder="username">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="row">
+                            <div class="label">Password</div>
+                            <input type="password" name="password" placeholder="password">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="row">
+                            <div class="label">Confirm Password</div>
+                            <input type="password" name="confirm_password" placeholder="confirm password">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="row">
+                            <div class="label">Address</div>
+                            <input type="text" name="Address" placeholder="Address">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="row">
+                            <div class="label">Marriage</div>
+                            <input type="checkbox" name="Marriage" id="checkMarried">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="row">
+                            <div class="label">gender</div>
+                    
+                                <div class="options">
+                                    <div class="choice">
+                                        <input name="gender" type="radio" id="gender" value="Male">
+                                        <div class="name-options">Male</div>
+                                    </div>
+                                    <div class="choice">
+                                        <input name="gender" type="radio"  id="gender" value="Female">
+                                        <div class="name-options">Female</div>
+                                    </div>
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="row">
+                            <div class="label">Address</div>
+                            <input type="text" name="Address" placeholder="Address">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="row-1">
+                                <div class="label">Skill</div>
+                                <div class="options_skill">
+                                    <div class="choice_skill">
+                                        <input name="skill" type="radio" id="skill" value="normal">
+                                        <div class="name-options">normal</div>
+                                    </div>
+                                    <div class="choice_skill">
+                                        <input name="skill" type="radio" id="skill" value="Good">
+                                        <div class="name-options">Good</div>
+                                    </div>
+                                    <div class="choice_skill">
+                                        <input name="skill" type="radio" id="skill" value="Very good">
+                                        <div class="name-options">Very good</div>
+                                    </div>
+                                    <div class="choice_skill">
+                                        <input name="skill" type="radio" id="skill" value="excellent">
+                                        <div class="name-options">excellent</div>
+                                    </div>
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="row-2">
+                            <div class="label">Job</div>
+                            <div id="jobs">
+                                    <select name="title" id="career">
+                                        <option value="Accounting">Accounting</option>
+                                        <option value="Software engineer">Software engineer</option>
+                                        <option value="Marketer">Marketer</option>
+                                        <option value="Saler">Saler</option>
+                                    </select>
+                            </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="row-1">
+                            <div class="label">Hobbies</div>
+                            <div class="checks">
+                                <div class="hobby">
+                                    <input type="checkbox" name="Football" value="Football" id="Football">
+                                    <div class="name-options">Football</div>
+                                </div>
+                                <div class="hobby">
+                                    <input type="checkbox" name="Listen to music" value="Listen to music" id="music">
+                                    <div class="name-options">Listen to music</div>
+                                </div>
+                                <div class="hobby">
+                                    <input type="checkbox" name="Playing games" value="Playing games" id="games">
+                                    <div class="name-options">Playing games</div>
+                                </div>
+                                <div class="hobby">
+                                    <input type="checkbox" name="Watching movies" value="Watching movies" id="movies">
+                                    <div class="name-options">Watching movies</div>
+                                </div>
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" onclick="getResult(this.value)" value="Submit">
+                    </td>
+                    
+                </tr>
+            </tbody>
+
+           
+
+        </table>
+    </form>
+    <script>
+        function getResult(data){
+            name=document.forms[0].username.value;
+            pass=document.forms[0].password.value;
+
+            add=document.forms[0].Address.value;
+           
+
+            var checkbox = document.getElementById("checkMarried");
+            var isChecked = checkbox.checked;
+            var married;
+            if (isChecked) {
+                married="Got married";
+            } else {
+                married="Not yet";
+            }
+
+            // Lấy giá trị của radio button giới tính
+            var genderRadios = document.getElementsByName("gender");
+            var selectedGender;
+
+            for (var i = 0; i < genderRadios.length; i++) {
+                if (genderRadios[i].checked) {
+                    selectedGender = genderRadios[i].value;
+                    break;
+                }
+            }
+            
+             // get skill
+             var skillRadios = document.getElementsByName("skill");
+            var selectedSkill;
+
+            for (var i = 0; i < skillRadios.length; i++) {
+                if (skillRadios[i].checked) {
+                    selectedSkill = skillRadios[i].value;
+                    break;
+                }
+            }
+
+
+            // get all Hobbies
+
+            var checkboxFootball = document.getElementById("Football");
+            var isCheckedFootball = checkboxFootball.checked;
+            var hobbies="";
+            if (isCheckedFootball) {
+                hobbies+="Football";
+            } 
+
+            var checkboxMusic = document.getElementById("music");
+            var isCheckedMusic = checkboxMusic.checked;
+            if (isCheckedMusic) {
+                hobbies+=", Music";
+            } 
+
+            var checkboxMovies = document.getElementById("movies");
+            var isCheckedMovies = checkboxMovies.checked;
+            if (isCheckedMovies) {
+                hobbies+=", movies";
+            } 
+            var checkboxGanes = document.getElementById("games");
+            var isCheckedGames = checkboxGanes.checked;
+            if (isCheckedGames) {
+                hobbies+=", games";
+            } 
+
+
+            // get job
+            var selectElement = document.getElementById("career");
+            var selectedValue = selectElement.value;
+
+            var selectedIndex = selectElement.selectedIndex;
+             var job = selectElement.options[selectedIndex].text;
+            alert("Name: "+name+"\n"+"Gender: "+selectedGender+"\n"+"Pass: "+pass+"\nMarried or not: "+married+"\nSkill: "+selectedSkill+"\nHobbies: "+hobbies+"\nJob: "+job);
+
+            
+
+
+
+        }
+    </script>
+</body>
+</html>

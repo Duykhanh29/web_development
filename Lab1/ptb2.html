@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: auto;
+            height: 100%;
+            width: 100%;
+            /* display: flex; */
+            align-items: center; 
+        }
+        #content{
+            background-color: aquamarine;
+            height: 500px;
+            width: 70%;
+            justify-content: center;
+            display: grid;
+            margin: auto;
+        }
+        #functions{
+            display: flex;
+            margin-top: 50px;
+            justify-content: center;
+        }
+        .activities{
+            width:  100px;
+            height: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>Giải phương trình bậc 2</h1>
+        <form >
+            <input type="text" name="number1" >
+            x<sup>2</sup>+
+            <input type="text" name="number2" >
+            x+
+            <input type="text" name="number3" > = 0
+        
+        <div id="functions">
+            <div class="activities">
+                <input type="button" onclick="solve('result')" value="Solve" >
+            </div>
+            <div class="activities">
+                <input type="reset" value="reset"/>
+            </div>
+        </div>
+        <label id="result"></label>
+    </form>
+    </div>
+    
+
+    <script>
+        function solve(id){
+            
+            num1=document.forms[0].number1.value;
+            num2=document.forms[0].number2.value;
+            num3=document.forms[0].number3.value;
+            // alert("1: "+num1+" 2: "+num2+" 3: "+num3);
+            if(num1==""){
+                alert("Input number 1 again");
+                return;
+            }
+            if(num2==""){
+                alert("Input number 2 again");
+                return;
+            }
+            if(num3==""){
+                alert("Input number 3 again");
+                return;
+            }
+            var dental=num2*num2-4*num1*num3;
+            //alert("D"+dental);
+            
+            if(dental<0){
+                document.getElementById(id).innerHTML= "<h4 align='center'>Phương trình vô nghiệm !</h4>";
+            }else if(dental==0){
+                var x = -num2 / (2 * num1);
+                    document.getElementById(id).innerHTML = "<h4 align='center'> Phương trình có nghiệm kép: x1 = x2 = " + x + "</h4>";
+
+            }else{
+                var x1 = (-num2 + Math.sqrt(dental)) / (2 * num1);
+                    var x2 = (-num2 - Math.sqrt(dental)) / (2 * num1);
+                    document.getElementById(id).innerHTML = "<h4 align='center'> Phương trình có 2 nghiệm: " + "<BR>" + "x1 = " + x1 + "<br>x2= " + x2 + "</h4>";
+
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+    
+
+
+ 

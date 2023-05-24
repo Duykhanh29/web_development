@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body{
+            /* display: flex; */
+            justify-content: center;
+            
+            
+        }
+        .execution-box{
+            display: flex;
+
+        }
+    </style>
+    <script type="text/javascript">
+        function execute_calculate(value){
+            num1=document.forms[0].number1.value;
+            num2=document.forms[0].number2.value;
+            num1=parseInt(num1);
+            num2=parseInt(num2);
+            if(value==="+"){
+                document.forms[0].result.value=num1+num2;
+            }else if(value==="-"){
+                document.forms[0].result.value= num1-num2;
+            }else if(value==='*'){
+                document.forms[0].result.value= num1*num2;
+            }else{
+                document.forms[0].result.value= num1/num2;
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <h2>Simple Calculator</h2>
+    <form >
+                <input type="text" name="number1" size=3 value=0>
+                <input type="button" name="plus" onclick="execute_calculate(this.value)"  size="9" value="+">
+                <input type="button" name="minu" onclick="execute_calculate(this.value) " size="9" value="-">
+                <input type="button" name="multi" onclick="execute_calculate(this.value) " size="9" value="*">
+                <input type="button" name="sub" onclick="execute_calculate(this.value)" size="9" value="/">
+                <input type="text" name="number2" size=3 value=0>
+                <input type="text" name="result" size=5 >
+    </form>
+    
+</body>
+</html>

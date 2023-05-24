@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var tenAnh = [
+  "real-madrid-phone-wallpapers-118398-848222-2956698.png",
+  "WallpaperDog-17091474.jpg",
+  "WallpaperDog-17091504.jpg",
+  "GOOG-0ed88f7c.png",
+  "wp10822674.jpg"
+
+];
+        var imageList= [];
+        var currentIndex=0;
+        function loadImages(){
+            imageList = tenAnh.map(function(ten) {
+                var image = new Image();
+                image.src = "assets/images/" + ten;
+                return image;
+            });
+            document.getElementById("hoa").src = imageList[currentIndex].src;
+        }
+        function next() {
+                if (currentIndex < imageList.length - 1) {
+                    document.getElementById("b1").disabled = false;
+                    currentIndex++;
+                    document.getElementById("hoa").src = imageList[currentIndex].src;
+                } else
+                    document.getElementById("b2").disabled = true;
+
+            }
+            function back() {
+                if (currentIndex > 0) {
+                    document.getElementById("b2").disabled = false;
+                    currentIndex--;
+                    document.getElementById("hoa").src = imageList[currentIndex].src;
+                }
+                else
+                    document.getElementById("b1").disabled = true;
+            }
+
+    </script>
+</head>
+<body onload="loadImages()"> 
+    <center>
+        <img id="hoa" src="" height="300" width="200" /><br/>
+        <input type="button" id="b1" value="back" onclick="back();" />
+        <input type="button" id="b2" value = "next"  onclick="next();"/>
+    </center>
+    
+
+   
+</body>
+</html>

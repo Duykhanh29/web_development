@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    align-items: center;
+}
+#header{
+    width: 100%;
+    background-color: blueviolet;
+  
+    height: 200px;
+    display: grid;
+    justify-content: center;
+    align-items: center; 
+    padding: 10px;
+}
+#image-header img{
+    border-color: aqua ;
+    border: 1px dashed;
+    height: 100%;
+    width: 140px;
+}
+#title {
+    /* font-size: 30; */
+    color: aqua;
+}
+#slogan{
+    /* font-size: ; */
+    color: chartreuse;
+}
+
+
+
+
+#main{
+    background-color: blanchedalmond;
+    height: calc(100vh - 200px);
+    width: 100%;
+    display: flex;
+}
+
+:sidebarWidth{
+    --size: 20px;
+}
+#side-bar{
+    height: 100%;
+    width: 300px;
+    padding: 10px;
+    background-color: cadetblue;
+}
+.input{
+    display: flex;
+    margin: 40px 10px 40px 10px;
+    justify-content: space-around;
+}
+#button{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+#navigator{
+    /* background-color: brown; */
+    /* margin-top: 80px; */
+     justify-content: center;
+     margin-bottom: 10px;
+    border-top: 0.2px solid #ebebeb;
+     margin-left: 5px;
+}
+.category{
+    border-bottom: 0.2px solid #ebebeb;
+    margin-top: 5px;
+     margin-bottom: 5px; 
+    padding: 10px;
+}
+.category span{
+    margin-left: 24px;
+}
+.category:hover{
+    cursor: pointer;
+    background-color: #888;
+}
+.iconCategory{
+    color: #606060;
+}
+#navigator a{
+    text-decoration: none;
+    color: #030303;
+}
+
+#footer{
+    display: flex;
+    height: 60px;
+    width: 100%;
+}
+#icons{
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.icon{
+    color: #606060;
+}
+#Infor{
+  
+    display: flex;
+}
+#showInfor{
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+}
+
+#content{
+    height: 100%;
+    width: 100%;
+    margin: 15px 15px 15px 15px;
+    display: inline-block;
+    /* align-items: center; */
+    justify-content: center;
+    
+}
+#first-intro{
+    text-align: center;
+}
+#frame{
+    height: 100%;
+    width: 100%;
+    background-color: #888;
+    align-items: center;
+    text-align: start;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+#start-intro{
+    text-align: center;
+}
+ol{
+    list-style-type: upper-roman;
+    padding-left: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
